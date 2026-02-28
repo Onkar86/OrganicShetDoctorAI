@@ -1,0 +1,19 @@
+{
+  "name": "Organic Shet Doctor AI - शेतीचा डॉक्टर",
+  "short_name": "Shet Doctor",
+  "description": "शेतकऱ्यांसाठी मराठी सेंद्रिय शेती सलाह व समाधान",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2e7d32",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' fill='%23c8e6c9'/><text x='50%' y='60%' font-size='120' text-anchor='middle' dominant-baseline='middle'>🌾</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
