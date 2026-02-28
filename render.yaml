@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: OrganicShetDoctorAI-backend
+    env: python
+    repo: https://github.com/Onkar86/OrganicShetDoctorAI
+    branch: master
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    region: oregon
+  - type: static
+    name: OrganicShetDoctorAI-frontend
+    env: static
+    repo: https://github.com/Onkar86/OrganicShetDoctorAI
+    branch: master
+    staticPublishPath: frontend
+    plan: free
+    region: oregon
