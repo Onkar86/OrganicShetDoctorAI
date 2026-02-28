@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#2e7d32">
+    <meta name="description" content="शेतकऱ्यांसाठी मराठी सेंद्रिय शेती सलाह">
+    
+    <title>ऑर्गेनिक शेती डॉक्टर</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🌾</text></svg>">
+</head>
+<body>
+    <!-- मुख्य कंटेनर -->
+    <div class="container">
+        
+        <!-- शीर्षक -->
+        <div class="header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1 class="app-title">🌾 ऑर्गेनिक शेती डॉक्टर 🌾</h1>
+                <button id="infoBtn" class="info-btn" title="माहिती वाचा">ℹ️</button>
+            </div>
+            <p class="subtitle">तुमच्या शेतीच्या समस्येचा उपाय</p>
+        </div>
+
+        <!-- माहिती Modal -->
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <button id="closeModal" class="close-btn">&times;</button>
+                
+                <h2 class="modal-title">ℹ️ शेतकऱ्यांसाठी माहिती</h2>
+                
+                <div class="modal-section">
+                    <h3>🔹 हा अ‍ॅप काय करतो?</h3>
+                    <p>हा अ‍ॅप शेतकऱ्याला झाडांचे रोग, कीड आणि वाढीच्या समस्या ओळखायला आणि देशी, सेंद्रिय उपाय सांगायला मदत करतो.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🔹 हे उपाय कशावर आधारित आहेत?</h3>
+                    <p>या अ‍ॅपमधील उपाय असे गोष्टींवर आधारित आहेत:</p>
+                    <ul>
+                        <li>✔️ पारंपरिक देशी शेती ज्ञान</li>
+                        <li>✔️ आयुर्वेदिक वनस्पती गुण</li>
+                        <li>✔️ अनेक शेतकऱ्यांचा अनुभव</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🔹 हे उपाय बरोबर का असतात?</h3>
+                    <p>नीम, तुळस, लसूण, ताक, राख या गोष्टी शेकडो वर्षांपासून शेतीत वापरल्या जात आहेत.</p>
+                    <p>कडू, तिखट, आंबट गुणामुळे किडी आणि रोग कमी होतात.</p>
+                </div>
+
+                <div class="modal-section warning-section">
+                    <h3>⚠️ महत्वाची सूचना</h3>
+                    <p>❗ हा अ‍ॅप औषध विकत नाही</p>
+                    <p>❗ कोणतंही रासायनिक औषध सुचवत नाही</p>
+                    <p>❗ 100% हमी देत नाही</p>
+                    <p style="margin-top: 1rem; font-weight: bold;">हे पारंपरिक सेंद्रिय शेती मार्गदर्शन आहे.<br>शेत, माती, पाणी यानुसार परिणाम बदलू शकतो.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🔹 वापरण्यापूर्वी लक्षात ठेवा</h3>
+                    <ul>
+                        <li>• आधी थोड्या भागावर उपाय करून पहा</li>
+                        <li>• फवारणी सकाळी किंवा संध्याकाळी करा</li>
+                        <li>• पावसात फवारणी टाळा</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🌱 आमचा उद्देश</h3>
+                    <p>शेतकऱ्याला बाजारावर अवलंबून न ठेवता स्वतःच्या शेतातून उपाय मिळावा हाच या अ‍ॅपचा हेतू आहे.</p>
+                </div>
+
+                <button id="closeBtn2" class="modal-button">बरोबर समजलं</button>
+            </div>
+        </div>
+
+        <!-- अस्वीकरण (महत्वाचे) -->
+        <div class="disclaimer-box">
+            <div class="disclaimer-icon">⚠️</div>
+            <div class="disclaimer-text">
+                <strong>महत्वाचे सूचना:</strong><br>
+                हे पारंपरिक सेंद्रिय शेती मार्गदर्शन आहे.<br>
+                स्थानिक परिस्थितीनुसार वापर करा.
+            </div>
+        </div>
+
+        <!-- समस्या निवडा -->
+        <section class="problem-section">
+            <h2 class="section-title">तुमची समस्या निवडा</h2>
+            
+            <select id="problemSelect" class="problem-select">
+                <option value="" disabled selected>👇 याठिकाणून निवडा 👇</option>
+            </select>
+            
+            <button id="btnSearch" class="search-button">🔍 उपाय दाखवा</button>
+            <button id="btnSpeak" class="search-button" style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);">🔊 उपाय ऐका</button>
+        </section>
+
+        <!-- उपाय दाखवायचे स्थान -->
+        <section id="result" class="result-section"></section>
+
+        <!-- फुटर -->
+        <footer class="footer">
+            <p>🌱 हे माहिती शेती विज्ञान केंद्रावर आधारित आहे</p>
+        </footer>
+    </div>
+    
+    <!-- JavaScript लोड करा -->
+    <script src="script.js"></script>
+    
+    <!-- Service Worker Registration for PWA -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(reg => console.log('✅ Service Worker registered'))
+            .catch(err => console.log('⚠️ Service Worker registration failed:', err));
+    }
+    
+    // PWA Install Prompt
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', e => {
+        e.preventDefault();
+        deferredPrompt = e;
+    });
+    </script>
+</body>
+</html>
